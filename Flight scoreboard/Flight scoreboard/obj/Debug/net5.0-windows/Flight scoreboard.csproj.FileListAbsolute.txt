@@ -1,0 +1,21 @@
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.csproj.AssemblyReference.cache
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight_scoreboard.Accaunt_choice.resources
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight_scoreboard.MainWindow.resources
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.csproj.GenerateResource.cache
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.AssemblyInfoInputs.cache
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.AssemblyInfo.cs
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.csproj.CoreCompileInputs.cache
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\Flight scoreboard.exe
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\Flight scoreboard.deps.json
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\Flight scoreboard.runtimeconfig.json
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\Flight scoreboard.runtimeconfig.dev.json
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\Flight scoreboard.dll
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\ref\Flight scoreboard.dll
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\bin\Debug\net5.0-windows\Flight scoreboard.pdb
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.dll
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\ref\Flight scoreboard.dll
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.pdb
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight scoreboard.genruntimeconfig.cache
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight_scoreboard.Lists_viewing.resources
+C:\Users\14\Desktop\Flight scoreboard\Flight scoreboard\obj\Debug\net5.0-windows\Flight_scoreboard.Lists_editing.resources
