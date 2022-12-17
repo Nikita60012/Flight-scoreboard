@@ -1,0 +1,25 @@
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\Flight scoreboard.exe.config
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\Flight scoreboard.exe
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\Flight scoreboard.pdb
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.csproj.AssemblyReference.cache
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight_scoreboard.Accaunt_choice.resources
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight_scoreboard.Main_window.resources
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight_scoreboard.Properties.Resources.resources
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.csproj.GenerateResource.cache
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.csproj.CoreCompileInputs.cache
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.exe
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.pdb
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight_scoreboard.ListsEditing.resources
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight_scoreboard.ListsViewing.resources
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.exe.config
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\MySql.Data.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\Google.Protobuf.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\ZstdNet.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\BouncyCastle.Crypto.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\System.Memory.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\System.Buffers.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\K4os.Compression.LZ4.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\K4os.Hash.xxHash.dll
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\bin\Debug\MySql.Data.xml
+D:\Users\Никита\source\repos\Flight scoreboard\Flight scoreboard\obj\Debug\Flight scoreboard.csproj.CopyComplete

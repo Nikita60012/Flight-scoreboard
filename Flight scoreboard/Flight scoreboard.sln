@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31829.152
+VisualStudioVersion = 16.0.32929.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flight scoreboard", "Flight scoreboard\Flight scoreboard.csproj", "{63CEEEFC-C25D-4B54-9139-131D8B1CDA2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flight scoreboard", "Flight scoreboard\Flight scoreboard.csproj", "{B2C3E59A-2FB3-4773-AFAA-CBD5D796D2F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{63CEEEFC-C25D-4B54-9139-131D8B1CDA2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63CEEEFC-C25D-4B54-9139-131D8B1CDA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63CEEEFC-C25D-4B54-9139-131D8B1CDA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63CEEEFC-C25D-4B54-9139-131D8B1CDA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C3E59A-2FB3-4773-AFAA-CBD5D796D2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C3E59A-2FB3-4773-AFAA-CBD5D796D2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C3E59A-2FB3-4773-AFAA-CBD5D796D2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C3E59A-2FB3-4773-AFAA-CBD5D796D2F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FD7C89B1-504C-4FF7-BB64-328919163513}
+		SolutionGuid = {0720015D-1EF8-42AC-AA31-6836CF74EF63}
 	EndGlobalSection
 EndGlobal
