@@ -24,131 +24,180 @@ namespace Flight_scoreboard
 
         public ListsEditing(bool arrAdmin)
         {
-            
             InitializeComponent();
-            loadData();
+
             this.arrAdmin = arrAdmin;
+            comboBoxLoader();
             if (!arrAdmin)
             {
+                loadDataDep();
                 Text = "Редактирование расписания отбывающих рейсов";
                 listOfArrive.Hide();
                 listOfDeparture.Show();
                 destinationL.Show();
                 destinationBox.Show();
             }
+            else
+            {
+                loadDataArr();
+            }
         }
 
-        private void loadData()
+        private void loadDataArr()
         {
+            //Установление соединения с базой данных и подгрузка данных
             db.openConnection();
 
-            if (arrAdmin)
+            string query = "SELECT * FROM `arrivals` ORDER BY `ID`";
+
+            MySqlCommand command = new MySqlCommand(query, db.getConnection());
+            adapter.SelectCommand = command;
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            BindingList<string[]> data = new BindingList<string[]>();
+
+            while (reader.Read())
             {
-                string query = "SELECT * FROM `arrivals` ORDER BY `ID`";
+                data.Add(new string[4]);
 
-                MySqlCommand command = new MySqlCommand(query, db.getConnection());
-                adapter.SelectCommand = command;
+                data[data.Count - 1][0] = reader[0].ToString();
+                data[data.Count - 1][1] = reader[1].ToString();
+                data[data.Count - 1][2] = reader[2].ToString();
+                data[data.Count - 1][3] = reader[3].ToString();
+            }
 
-                MySqlDataReader reader = command.ExecuteReader();
+            db.closeConnection();
+            reader.Close();
 
-                BindingList<string[]> data = new BindingList<string[]>();
+            //Передача данных в таблицу
+            foreach (string[] s in data)
+                listOfArrive.Rows.Add(s);
 
-                while (reader.Read())
+            //Установка разных цветов для чётных и нечётных рядов
+            for (int i = 0; i < listOfArrive.Rows.Count; i++)
+            {
+                for (int j = 0; j < 4; j++)
                 {
-                    data.Add(new string[4]);
-
-                    data[data.Count - 1][0] = reader[0].ToString();
-                    data[data.Count - 1][1] = reader[1].ToString();
-                    data[data.Count - 1][2] = reader[2].ToString();
-                    data[data.Count - 1][3] = reader[3].ToString();
-                }
-
-                db.closeConnection();
-                reader.Close();
-
-                foreach (string[] s in data)
-                    listOfArrive.Rows.Add(s);
-
-                for (int i = 0; i < listOfArrive.Rows.Count; i++)
-                {
-                    for (int j = 0; j < 4; j++)
+                    if (i == 0 || i % 2 == 0)
                     {
-                        if (i == 0 || i % 2 == 0)
-                        {
-                            listOfArrive.Rows[i].Cells[j].Style.BackColor = Color.LightGray;
-                        }
-                        else if (i % 2 == 1)
-                        {
-                            listOfArrive.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        }
+                        listOfArrive.Rows[i].Cells[j].Style.BackColor = Color.LightBlue;
+                    }
+                    else if (i % 2 == 1)
+                    {
+                        listOfArrive.Rows[i].Cells[j].Style.BackColor = Color.White;
                     }
                 }
             }
-            else
+
+        }
+        
+        private void loadDataDep()
+        {
+            //Установление соединения с базой данных и подгрузка данных
+            db.openConnection();
+
+            string query = "SELECT * FROM `flights` ORDER BY `ID`";
+
+            MySqlCommand command = new MySqlCommand(query, db.getConnection());
+            adapter.SelectCommand = command;
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            BindingList<string[]> data = new BindingList<string[]>();
+
+            while (reader.Read())
             {
-                string query = "SELECT * FROM `flights` ORDER BY `ID`";
+                data.Add(new string[5]);
 
-                MySqlCommand command = new MySqlCommand(query, db.getConnection());
-                adapter.SelectCommand = command;
+                data[data.Count - 1][0] = reader[0].ToString();
+                data[data.Count - 1][1] = reader[1].ToString();
+                data[data.Count - 1][2] = reader[2].ToString();
+                data[data.Count - 1][3] = reader[3].ToString();
+                data[data.Count - 1][4] = reader[4].ToString();
+            }
 
-                MySqlDataReader reader = command.ExecuteReader();
+            reader.Close();
+            db.closeConnection();
 
-                BindingList<string[]> data = new BindingList<string[]>();
+            //Передача данных в таблицу
+            foreach (string[] s in data)
+                listOfDeparture.Rows.Add(s);
 
-                while (reader.Read())
+            //Установка разных цветов для чётных и нечётных рядов
+            for (int i = 0; i < listOfDeparture.Rows.Count; i++)
+            {
+                for (int j = 0; j < 5; j++)
                 {
-                    data.Add(new string[5]);
-
-                    data[data.Count - 1][0] = reader[0].ToString();
-                    data[data.Count - 1][1] = reader[1].ToString();
-                    data[data.Count - 1][2] = reader[2].ToString();
-                    data[data.Count - 1][3] = reader[3].ToString();
-                    data[data.Count - 1][4] = reader[4].ToString();
-                }
-
-                reader.Close();
-                db.closeConnection();
-            
-                foreach (string[] s in data)
-                    listOfDeparture.Rows.Add(s);
-
-                for (int i = 0; i < listOfDeparture.Rows.Count; i++)
-                {
-                    for (int j = 0; j < 5; j++)
+                    if (i == 0 || i % 2 == 0)
                     {
-                        if (i == 0 || i % 2 == 0)
-                        {
-                            listOfDeparture.Rows[i].Cells[j].Style.BackColor = Color.LightGray;
-                        }
-                        else if (i % 2 == 1)
-                        {
-                            listOfDeparture.Rows[i].Cells[j].Style.BackColor = Color.White;
-                        }
+                        listOfDeparture.Rows[i].Cells[j].Style.BackColor = Color.LightBlue;
                     }
+                    else if (i % 2 == 1)
+                    {
+                        listOfDeparture.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    }
+                }
+            }
+        }
+
+        private void comboBoxLoader()
+        {
+            //Подгрузка данных в выпадающие списки
+            string input;
+            using (System.IO.StreamReader reader = new System.IO.StreamReader("Aircrafts.txt"))
+            {
+                while ((input = reader.ReadLine()) != null) {
+                    numberBox.Items.Add(input);
+                }
+            }
+            using (System.IO.StreamReader reader = new System.IO.StreamReader("Cities.txt"))
+            {
+                while ((input = reader.ReadLine()) != null)
+                {
+                    destinationBox.Items.Add(input);
+                }
+            }
+            using (System.IO.StreamReader reader = new System.IO.StreamReader("Exits.txt"))
+            {
+                while ((input = reader.ReadLine()) != null)
+                {
+                   exitBox.Items.Add(input);
                 }
             }
         }
 
         private void add_button_Click(object sender, EventArgs e)
         {
+            //Добавление новой строки для администратора расписания прибывающих рейсов
             if (arrAdmin)
             {
                 MySqlCommand sqlCopyCommand = new MySqlCommand("SELECT * FROM `arrivals` WHERE `Numbers` = '" + numberBox.Text + "'", db.getConnection());
 
                 adapter.SelectCommand = sqlCopyCommand;
                 adapter.Fill(dt);
-
+                
                 MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO `arrivals` (`Numbers`, `Time`,`Exits`) VALUES ('" + numberBox.Text + "', '" + timeBox.Text + "', '" + exitBox.Text + "')", db.getConnection());
 
-                db.openConnection();
+                if (!numberBox.Text.Equals("") || !exitBox.Text.Equals(""))
+                {
 
-                sqlCommand.ExecuteNonQuery();
+                    db.openConnection();
 
-                db.closeConnection();
+                    sqlCommand.ExecuteNonQuery();
 
-                listOfArrive.DataSource = null;
-                listOfArrive.Rows.Clear();
+                    db.closeConnection();
+
+                    listOfArrive.DataSource = null;
+                    listOfArrive.Rows.Clear();
+                    loadDataArr();
+                }
+                else
+                {
+                    MessageBox.Show("Введите все необходимые данные");
+                }
             }
+            //Добавление новой строки для администратора расписания отбывающих рейсов
             else
             {
                 MySqlCommand sqlCopyCommand = new MySqlCommand("SELECT * FROM `flights` WHERE `Numbers` = '" + numberBox.Text + "'", db.getConnection());
@@ -158,19 +207,29 @@ namespace Flight_scoreboard
 
                 MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO `flights` (`Numbers`, `Dest`, `Time`,`Exits`) VALUES ('" + numberBox.Text + "', '" + destinationBox.Text + "', '" + timeBox.Text + "', '" + exitBox.Text + "')", db.getConnection());
 
-                db.openConnection();
+                if (!numberBox.Text.Equals("") || !destinationBox.Text.Equals("") || !exitBox.Text.Equals(""))
+                {
 
-                sqlCommand.ExecuteNonQuery();
+                    db.openConnection();
 
-                db.closeConnection();
+                    sqlCommand.ExecuteNonQuery();
 
-                listOfDeparture.DataSource = null;
-                listOfDeparture.Rows.Clear();
+                    db.closeConnection();
+
+                    listOfDeparture.DataSource = null;
+                    listOfDeparture.Rows.Clear();
+                    loadDataDep();
+                }
+                else
+                {
+                    MessageBox.Show("Введите все необходимые данные");
+                }
             }
-            loadData();
+            
         }
         private void listOfArrive_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Передача данных выбранной строки в выпадающие списки для администратора расписания прибывающих рейсов
             if (e.RowIndex != -1)
             {
                 idNumber = Convert.ToInt32(listOfArrive.Rows[e.RowIndex].Cells[0].Value);
@@ -181,7 +240,7 @@ namespace Flight_scoreboard
         }
         private void listOfDeparture_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //Передача данных выбранной строки в выпадающие списки для администратора расписания отбывающих рейсов
             if (e.RowIndex != -1)
             {
                 idNumber = Convert.ToInt32(listOfDeparture.Rows[e.RowIndex].Cells[0].Value);
@@ -205,6 +264,7 @@ namespace Flight_scoreboard
 
                 listOfArrive.DataSource = null;
                 listOfArrive.Rows.Clear();
+                loadDataArr();
             }
             else
             {
@@ -215,8 +275,8 @@ namespace Flight_scoreboard
 
                 listOfDeparture.DataSource = null;
                 listOfDeparture.Rows.Clear();
+                loadDataDep();
             }
-            loadData();
         }
 
         private void del_button_Click(object sender, EventArgs e)
@@ -238,6 +298,7 @@ namespace Flight_scoreboard
 
                 listOfArrive.DataSource = null;
                 listOfArrive.Rows.Clear();
+                loadDataArr();
             }
             else{
                 rowIndex = Convert.ToInt32(listOfDeparture.CurrentRow.Cells["idd"].Value);
@@ -255,8 +316,8 @@ namespace Flight_scoreboard
 
                 listOfDeparture.DataSource = null;
                 listOfDeparture.Rows.Clear();
+                loadDataDep();
             }
-            loadData();
 
         }
         private void back_button_Click(object sender, EventArgs e)

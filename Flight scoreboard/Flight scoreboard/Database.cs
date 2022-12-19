@@ -4,7 +4,7 @@ namespace Flight_scoreboard
 {
     public class Database
     {
-        public MySqlConnection conn = new MySqlConnection("server=localhost;port=3306;username=root;password=root;database=flight_scoreboard;charset=utf8");
+        public MySqlConnection conn = new MySqlConnection("server=localhost;port=3305;username=root;password=root;database=flight_scoreboard;charset=utf8");
 
         public void openConnection()
         {

@@ -20,16 +20,30 @@ namespace Flight_scoreboard
 
         private void enter_button_Click(object sender, EventArgs e)
         {
-            String password = passwordEnter.Text;
+            string password = passwordEnter.Text;
+            string[] pass = new string[2];
+            string input;
+            /*
+             * Пароли:
+             * Администратор расписания прибывающих рейсов 12336
+             * Администратор расписания прибывающих рейсов 63321
+            */
+            using (System.IO.StreamReader reader = new System.IO.StreamReader("Passwords.txt"))
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    pass[i] = reader.ReadLine();
+                }
+            }
             
-            if (password.Equals("123"))
+            if (password.Equals(pass[0]))
             {
                 arrAdmin = true;
                 Hide();
                 Main_window main = new Main_window(arrAdmin);
                 main.Show();
             }
-            else if (password.Equals("321"))
+            else if (password.Equals(pass[1]))
             {
                 arrAdmin = false;
                 Hide();
@@ -38,7 +52,7 @@ namespace Flight_scoreboard
             }
             else
             {
-                MessageBox.Show("Введён неверный пароль");
+                MessageBox.Show("Введён неверный пароль, введите ещё раз");
             }
             
         }
