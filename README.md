@@ -34,10 +34,9 @@
 
 ### Создано с помощью
 
-* Visual Studio 2019
-* Windows Forms
-* MAMP
-* phpMyAdmin
+* [Visual Studio 2019](https://visualstudio.microsoft.com/ru/)
+* [MAMP](https://www.mamp.info/en/mamp/windows/)
+* [phpMyAdmin](https://www.phpmyadmin.net/)
 
 
 
