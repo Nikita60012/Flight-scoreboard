@@ -7,7 +7,6 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/Nikita60012/Flight-scoreboard">
     <img src="https://user-images.githubusercontent.com/96587581/209627536-4a236ce4-a4c6-49c7-a069-c74e8f410fa9.png" alt="Logo"  width="80" height="80">
